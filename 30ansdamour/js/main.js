@@ -46,7 +46,6 @@ function getCookie(cname) {
 
 function submitForm(mode) {
 
-<<<<<<< HEAD
     console.log('email: ' + pureField($('input[name="email"]').val()));
     var data = {
         "db": {
@@ -71,32 +70,6 @@ function submitForm(mode) {
         //"grecaptcha_response": grecaptcha.getResponse()
     };
     makeCorsRequest(data);
-=======
-  console.log("bonjour");
-  var data = {
-    "db": {
-      "schema": "mdp_newsletter",
-      "db": {
-        "email": pureField($("input[name='email']").val()),
-    },
-    "woopra" : {
-      "host": "nospetitsfreresetsoeurs.org",
-      "cookie": getCookie("wooTracker"),
-      "event": "lp-video_inscription",
-      "cv_email": pureField($("input[name='email']").val()),
-      "ce_reserved_code_media": getCodeMedia(),
-      "ce_language": "fr_FR"
-    },
-    "mailjet": {
-      "Email": pureField($("input[name='email']").val()),
-      },
-      "addLists": [],
-      "delLists": []
-    },
-    //"grecaptcha_response": grecaptcha.getResponse()
-  }
-makeCorsRequest(data);
->>>>>>> 921c24d596dfa69dd2f53f44e2c0188a843ae057
 }
 
 function createCORSRequest(method, url) {

@@ -117,25 +117,11 @@ woopra.config({
     domain: 'nospetitsfreresetsoeurs.org'
 });
 woopra.track();
-</script>
-<script type="text/javascript">
-    adroll_adv_id = "LL6UYE5P3BB2FEC6REEWZA";
-    adroll_pix_id = "66HXP7WT3NG25IWEYFOWOV";
-    (function () {
-        var _onload = function(){
-            if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
-            if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
-            var scr = document.createElement("script");
-            var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
-            scr.setAttribute('async', 'true');
-            scr.type = "text/javascript";
-            scr.src = host + "/j/roundtrip.js";
-            ((document.getElementsByTagName('head') || [null])[0] ||
-                document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
-        };
-        if (window.addEventListener) {window.addEventListener('load', _onload, false);}
-        else {window.attachEvent('onload', _onload)}
-    }());
+$(document).ready(function(){
+    $("form.mj-form").submit(function(){
+        console.log("test");
+    });
+})
 </script>
   <script src="js/vendor/jquery.js"></script>
   <script src="js/vendor/what-input.js"></script>

@@ -47,6 +47,7 @@ function pureField(string) {
 
 function submitForm(mode) {
 
+  console.log("bonjour");
   var data = {
     "db": {
       "schema": "mdp_newsletter",

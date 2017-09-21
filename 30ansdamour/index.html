@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
+  <div class="row expanded notification" style="display: none;">Votre inscription à bien été pris en compte</div>
   <div class="global_container">
     <header id="top_page">
       <div class="row">
@@ -79,7 +80,13 @@
         <p style="display: inline-block; font-weight: bold;">Je m'inscris à la Newsletter</p>
         <input type="text" name="email" style="background-color: rgb(230, 230, 230); width: 250px; display: inline-block; height: 33px;" placeholder="Votre adresse e-mail">
         <input type="button" name="OK" value="OK" onclick="validateForm()" style="background-color: rgb(34, 86, 146); color: white;">
-      </form>   
+        <div class="feedback error_mail" style="display: none;">
+            Le format de l'email est incorrect
+          </div>
+          <div class="feedback g_error" style="display: none;">
+            Les champs marqués en rouge sont obligatoires
+          </div>
+      </form>
     </section>
     <footer>
       <div style="padding-top: 20px;" class="row">

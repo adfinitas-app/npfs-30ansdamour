@@ -77,8 +77,8 @@
     <section style="background: white;">
       <form class="text-center">
         <p style="display: inline-block; font-weight: bold;">Je m'inscris à la Newsletter</p>
-        <input type="text" name="Votre adresse e-mail" style="background-color: rgb(230, 230, 230); width: 250px; display: inline-block; height: 33px;" placeholder="Votre adresse e-mail">
-        <input type="submit" name="OK" value="OK" style="background-color: rgb(34, 86, 146); color: white;">
+        <input type="text" name="email" style="background-color: rgb(230, 230, 230); width: 250px; display: inline-block; height: 33px;" placeholder="Votre adresse e-mail">
+        <input type="submit" name="OK" value="OK" onclick="validateForm()" style="background-color: rgb(34, 86, 146); color: white;">
       </form>   
     </section>
     <footer>
@@ -126,6 +126,7 @@
   <script src="js/vendor/what-input.js"></script>
   <script src="js/vendor/foundation.js"></script>
   <script src="js/app.js"></script>
+  <script src="js/main.js"></script>
 <script>
   $(document).ready(function() {
   $('a.anchor').click(function(event) {

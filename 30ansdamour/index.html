@@ -124,7 +124,7 @@
     $(document).ready(function(){
         $("form.mj-form").submit(function(){
             console.log("test");
-            woopra.identify({"email": $("input[name='w-field-field-15310-87949-572945-email']")});
+            woopra.identify({"email": $("input[name='w-field-field-15310-87949-572945-email']").val()});
         });
     });
 </script>

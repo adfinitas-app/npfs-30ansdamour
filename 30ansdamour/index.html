@@ -134,23 +134,39 @@
   <script src="js/vendor/foundation.js"></script>
   <script src="js/app.js"></script>
   <script src="js/main.js"></script>
-<script>
-  $(document).ready(function() {
-  $('a.anchor').click(function(event) {
-        event.preventDefault();
-        $('html, body').animate({
-            scrollTop: $( $.attr(this, 'href') ).offset().top
-        }, 500);
-    });
-  });
-    (function(){
-            var t,i,e,n=window,o=document,a=arguments,s="script",r=["config","track","identify","visit","push","call","trackForm","trackClick"],c=function(){var t,i=this;for(i._e=[],t=0;r.length>t;t++)(function(t){i[t]=function(){return i._e.push([t].concat(Array.prototype.slice.call(arguments,0))),i}})(r[t])};for(n._w=n._w||{},t=0;a.length>t;t++)n._w[a[t]]=n[a[t]]=n[a[t]]||new c;i=o.createElement(s),i.async=1,i.src="//static.woopra.com/js/w.js",e=o.getElementsByTagName(s)[0],e.parentNode.insertBefore(i,e)
-    })("woopra");
-    
-    woopra.config({
-        domain: 'nospetitsfreresetsoeurs.org'
-    });
-    woopra.track();
-</script>
+    <script>
+        function extractUrlParams() {
+          var match,
+          urlParams,
+          pl     = /\+/g,  // Regex for replacing addition symbol with a space
+          search = /([^&=]+)=?([^&]*)/g,
+          decode = function (s) { return decodeURIComponent(s.replace(pl, " ")); },
+          query  = window.location.search.substring(1);
+        
+          urlParams = {};
+          while (match = search.exec(query))
+            urlParams[decode(match[1])] = decode(match[2]);
+          return urlParams;
+        }
+      $(document).ready(function() {
+      $('a.anchor').click(function(event) {
+            event.preventDefault();
+            $('html, body').animate({
+                scrollTop: $( $.attr(this, 'href') ).offset().top
+            }, 500);
+        });
+      });
+      	var p = extractUrlParams();
+        (function(){
+                var t,i,e,n=window,o=document,a=arguments,s="script",r=["config","track","identify","visit","push","call","trackForm","trackClick"],c=function(){var t,i=this;for(i._e=[],t=0;r.length>t;t++)(function(t){i[t]=function(){return i._e.push([t].concat(Array.prototype.slice.call(arguments,0))),i}})(r[t])};for(n._w=n._w||{},t=0;a.length>t;t++)n._w[a[t]]=n[a[t]]=n[a[t]]||new c;i=o.createElement(s),i.async=1,i.src="//static.woopra.com/js/w.js",e=o.getElementsByTagName(s)[0],e.parentNode.insertBefore(i,e)
+        })("woopra");
+        
+        woopra.config({
+            domain: 'nospetitsfreresetsoeurs.org'
+        });
+        "eenc" in p ? woopra.identify({"md5":p["eenc"]}) : false;
+        "mbzid" in p ? woopra.identify({"id_mesopmindbaz":p["mbzid"]}) : false;
+        woopra.track();
+    </script>
   </body>
 </html>

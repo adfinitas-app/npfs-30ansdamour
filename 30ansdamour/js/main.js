@@ -58,16 +58,16 @@ function submitForm(mode) {
                 "cookie": getCookie("wooTracker"),
                 "event": "lp-video_inscription",
                 "cv_email": pureField($("input[name='email']").val()),
-                "ce_reserved_code_media": getCodeMedia(),
-                "ce_language": "fr_FR"
+                "ce_url": document.location.href,
+                "ce_title": document.title
             },
             "mailjet": {
                 "Email": pureField($("input[name='email']").val()),
-            },
-            "addLists": [],
-            "delLists": []
+                "Properties": {},
+                "addLists": [],
+                "delLists": []
+            }
         }
-        //"grecaptcha_response": grecaptcha.getResponse()
     };
     makeCorsRequest(data);
 }

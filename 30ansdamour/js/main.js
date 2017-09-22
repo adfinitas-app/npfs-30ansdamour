@@ -49,24 +49,24 @@ function submitForm(mode) {
     console.log('email: ' + pureField($('input[name="email"]').val()));
     var data = {
         "db": {
-            "schema": "npfs_30ansdamour",
-            "db": {
-                "email": pureField($("input[name='email']").val()),
-            },
-            "woopra" : {
-                "host": "nospetitsfreresetsoeurs.org",
-                "cookie": getCookie("wooTracker"),
-                "event": "lp-video_inscription",
-                "cv_email": pureField($("input[name='email']").val()),
-                "ce_url": document.location.href,
-                "ce_title": document.title
-            },
-            "mailjet": {
-                "Email": pureField($("input[name='email']").val()),
-                "Properties": {},
-                "addLists": [],
-                "delLists": []
-            }
+                "schema": "npfs_30ansdamour",
+                "db": {
+                    "email": pureField($("input[name='email']").val()),
+                }
+        },
+        "woopra" : {
+            "host": "nospetitsfreresetsoeurs.org",
+            "cookie": getCookie("wooTracker"),
+            "event": "lp-video_inscription",
+            "cv_email": pureField($("input[name='email']").val()),
+            "ce_url": document.location.href,
+            "ce_title": document.title
+        },
+        "mailjet": {
+            "Email": pureField($("input[name='email']").val()),
+            "Properties": {},
+            "addLists": [],
+            "delLists": []
         }
     };
     makeCorsRequest(data);

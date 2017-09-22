@@ -91,17 +91,13 @@ function createCORSRequest(method, url) {
 function makeCorsRequest(data) {
     var url = 'https://adfinitas-io.herokuapp.com/api/v1/organization/31451a9e-d1d4-4901-91de-aafe2dc78733/webhook/cc6375c0-c366-4cae-95b8-273a9bd22256';
     var body = JSON.stringify(data);
-    console.log('on rentre aussi1');
     var xhr = createCORSRequest('POST', url);
     if (!xhr) {
         alert('CORS not supported');
         return;
     }
-    console.log('on rentre aussi2');
     xhr.setRequestHeader('Content-Type', 'application/json');
-    console.log('on rentre aussi3');
     xhr.send(body);
-    console.log('on rentre aussi4');
 }
 
 function extractUrlParams(){
@@ -112,10 +108,3 @@ function extractUrlParams(){
     }
     return f;
 };
-
-function getCodeMedia() {
-    if ('reserved_code_media' in p && p['reserved_code_media'] != "")
-        return p['reserved_code_media'];
-    else
-        return ("2017WENQ")
-}

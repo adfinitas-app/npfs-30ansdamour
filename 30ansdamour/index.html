@@ -34,7 +34,7 @@
         <div class="row">
           <div class=" text-center small-10 medium-10 large-10 small-offset-1 medium-offset-1 large-offset-1 columns">Rejoignez la chaine de solidarité de Nos Petis Frères et S&#339urs.</div>
           <div class="text-center small-10 medium-10 large-10 small-offset-1 medium-offset-1 large-offset-1 columns">
-            <iframe width="80%" height="450" src="https://www.youtube.com/embed/xuwQJWhOVKM"></iframe>
+            <div id="player"></div>
           </div>
           <div class="text-center small-10 medium-10 large-10 small-offset-1 medium-offset-1 large-offset-1 columns end">
             <a target="_blank" href="http://www.nospetitsfreresetsoeurs.org/faire-un-don/?utm_campaign=30ansdamour&utm_medium=email&utm_source=LP"><img id="bouton_don" width="65%" style="max-width: 250px;" src="https://s3.amazonaws.com/heroku-adfinitas-campaign/npfs+30+ans/bouton-don.png"></a></div>
@@ -134,39 +134,75 @@
   <script src="js/vendor/foundation.js"></script>
   <script src="js/app.js"></script>
   <script src="js/main.js"></script>
-    <script>
-        function extractUrlParams() {
-          var match,
-          urlParams,
-          pl     = /\+/g,  // Regex for replacing addition symbol with a space
-          search = /([^&=]+)=?([^&]*)/g,
-          decode = function (s) { return decodeURIComponent(s.replace(pl, " ")); },
-          query  = window.location.search.substring(1);
-        
-          urlParams = {};
-          while (match = search.exec(query))
-            urlParams[decode(match[1])] = decode(match[2]);
-          return urlParams;
+  <script>
+    var player;
+        function onYouTubePlayerAPIReady() {
+            player = new YT.Player('player', {
+              videoId: 'xuwQJWhOVKM',
+              width: "80%",
+              height: "450",
+              events: {
+                onStateChange: onPlayerStateChange
+            }
+        });
+    }
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    var check = true
+    function onPlayerStateChange(event) {   
+        if (event.data == YT.PlayerState.PLAYING && check == true) // BEGIN
+        {
+            check = false;
+            woopra.track("interaction", {
+                action : "video-start",
+                category : "pasdepretexte",
+                url : document.location.href,
+                title : document.title
+            });
         }
-      $(document).ready(function() {
-      $('a.anchor').click(function(event) {
-            event.preventDefault();
-            $('html, body').animate({
-                scrollTop: $( $.attr(this, 'href') ).offset().top
-            }, 500);
-        });
-      });
-      	var p = extractUrlParams();
-        (function(){
-                var t,i,e,n=window,o=document,a=arguments,s="script",r=["config","track","identify","visit","push","call","trackForm","trackClick"],c=function(){var t,i=this;for(i._e=[],t=0;r.length>t;t++)(function(t){i[t]=function(){return i._e.push([t].concat(Array.prototype.slice.call(arguments,0))),i}})(r[t])};for(n._w=n._w||{},t=0;a.length>t;t++)n._w[a[t]]=n[a[t]]=n[a[t]]||new c;i=o.createElement(s),i.async=1,i.src="//static.woopra.com/js/w.js",e=o.getElementsByTagName(s)[0],e.parentNode.insertBefore(i,e)
-        })("woopra");
-        
-        woopra.config({
-            domain: 'nospetitsfreresetsoeurs.org'
-        });
-        "eenc" in p ? woopra.identify({"md5":p["eenc"]}) : false;
-        "mbzid" in p ? woopra.identify({"id_mesopmindbaz":p["mbzid"]}) : false;
-        woopra.track();
+        if(event.data === YT.PlayerState.ENDED) { // FINISHED
+            woopra.track("interaction", {
+                action : "video-end",
+                category : "pasdepretexte",
+                url : document.location.href,
+                title : document.title
+            });
+        }
+    }
+    function extractUrlParams() {
+      var match,
+      urlParams,
+      pl     = /\+/g,  // Regex for replacing addition symbol with a space
+      search = /([^&=]+)=?([^&]*)/g,
+      decode = function (s) { return decodeURIComponent(s.replace(pl, " ")); },
+      query  = window.location.search.substring(1);
+    
+      urlParams = {};
+      while (match = search.exec(query))
+        urlParams[decode(match[1])] = decode(match[2]);
+      return urlParams;
+    }
+    $(document).ready(function() {
+    $('a.anchor').click(function(event) {
+        event.preventDefault();
+        $('html, body').animate({
+            scrollTop: $( $.attr(this, 'href') ).offset().top
+        }, 500);
+    });
+    });
+      var p = extractUrlParams();
+    (function(){
+            var t,i,e,n=window,o=document,a=arguments,s="script",r=["config","track","identify","visit","push","call","trackForm","trackClick"],c=function(){var t,i=this;for(i._e=[],t=0;r.length>t;t++)(function(t){i[t]=function(){return i._e.push([t].concat(Array.prototype.slice.call(arguments,0))),i}})(r[t])};for(n._w=n._w||{},t=0;a.length>t;t++)n._w[a[t]]=n[a[t]]=n[a[t]]||new c;i=o.createElement(s),i.async=1,i.src="//static.woopra.com/js/w.js",e=o.getElementsByTagName(s)[0],e.parentNode.insertBefore(i,e)
+    })("woopra");
+    
+    woopra.config({
+        domain: 'nospetitsfreresetsoeurs.org'
+    });
+    "eenc" in p ? woopra.identify({"md5":p["eenc"]}) : false;
+    "mbzid" in p ? woopra.identify({"id_mesopmindbaz":p["mbzid"]}) : false;
+    woopra.track();
     </script>
   </body>
 </html>

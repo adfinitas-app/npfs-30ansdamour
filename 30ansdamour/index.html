@@ -146,17 +146,18 @@
             }
         });
     }
-    var check = true
+    var f = true
     function onPlayerStateChange(event) {   
-        if (event.data == YT.PlayerState.PLAYING && check == true) // BEGIN
+        if (event.data == YT.PlayerState.PLAYING && f == true) // BEGIN
         {
-            check = false;
+            f = false;
             woopra.track("interaction", {
                 action : "video-start",
                 category : "30ansdamour",
                 url : document.location.href,
                 title : document.title
             });
+            __adroll.record_user({"adroll_segments": "61dcf450"});
         }
         if(event.data === YT.PlayerState.ENDED) { // FINISHED
             woopra.track("interaction", {
@@ -165,6 +166,7 @@
                 url : document.location.href,
                 title : document.title
             });
+            __adroll.record_user({"adroll_segments": "07a63c3b"});
         }
     }
     var tag = document.createElement('script');

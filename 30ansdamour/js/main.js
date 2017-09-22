@@ -49,7 +49,7 @@ function submitForm(mode) {
     console.log('email: ' + pureField($('input[name="email"]').val()));
     var data = {
         "db": {
-            "schema": "mdp_newsletter",
+            "schema": "npfs_30ansdamour",
             "db": {
                 "email": pureField($("input[name='email']").val()),
             },

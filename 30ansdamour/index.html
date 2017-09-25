@@ -159,7 +159,10 @@
                 url : document.location.href,
                 title : document.title
             });
-            __adroll.record_user({"adroll_segments": "61dcf450"});
+            if (typeof(__adroll) !- "undefined"){
+                __adroll.record_user({"adroll_segments": "61dcf450"});
+                console.log("adroll track");
+            }
         }
         if(event.data === YT.PlayerState.ENDED) { // FINISHED
             woopra.track("interaction", {

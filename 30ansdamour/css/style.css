@@ -75,6 +75,25 @@ body section .text-center
 	margin-bottom: 20px;
 }
 
+.notification {
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    top: 0;
+    padding: 10px;
+    text-align: center;
+    background-color: #e09ba3;
+    display: none;
+
+}
+.notification p {
+    margin-bottom: 0;
+    font-family: 'Open Sans';
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+}
+
 footer
 {
 	background-color: rgb(34, 86, 146);

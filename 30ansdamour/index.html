@@ -159,7 +159,6 @@
                 url : document.location.href,
                 title : document.title
             });
-            __adroll.record_user({"adroll_segments": "61dcf450"});
         }
         if(event.data === YT.PlayerState.ENDED) { // FINISHED
             woopra.track("interaction", {
@@ -168,7 +167,6 @@
                 url : document.location.href,
                 title : document.title
             });
-            __adroll.record_user({"adroll_segments": "07a63c3b"});
         }
     }
     var tag = document.createElement('script');

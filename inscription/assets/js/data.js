@@ -58,7 +58,7 @@ function sendData() {
 
     //console.log(data);
     if (makeCorsRequest(data)) {
-        displayNotif("Merci pour votre insciption !");
+        displayNotif("Merci pour votre inscription !");
     }
 }
 

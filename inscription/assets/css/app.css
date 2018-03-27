@@ -1,0 +1,189 @@
+@font-face {
+	font-family: 'Helvetica Neue Bold';
+	src: url('../fonts/helveticaneueltstd-bdcn-webfont-webfont-webfont.woff2') format('woff2'),
+	url('../fonts/helveticaneueltstd-bdcn-webfont-webfont-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Helvetica Neue CN';
+	src: url('../fonts/helveticaneueltstd-cn-webfont-webfont.woff2') format('woff2'),
+	url('../fonts/helveticaneueltstd-cn-webfont-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Helvetica Neue Light';
+	src: url('../fonts/helveticaneueltstd-ltcn-webfont-webfont.woff2') format('woff2'),
+	url('../fonts/helveticaneueltstd-ltcn-webfont-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+p, a, h1, h2, h3, h4, h5, h6, li, button, input {
+	font-family: 'HelveticaNeueLtCd', sans-serif;
+}
+
+.non-bold {
+	font-weight: normal !important;
+}
+.bold {
+	font-weight: bold !important;
+}
+.relative {
+	position: relative;
+}
+.no-margin {
+	margin: 0;
+}
+.no-padding {
+	padding: 0;
+}
+.no-padding-left {
+	padding-left: 0;
+}
+.no-padding-right {
+	padding-right: 0;
+}
+.max-width {
+	max-width: 75rem !important;
+}
+.min-width {
+	min-width: 75rem !important;
+}
+.visible {
+	visibility: visible !important;
+}
+.flex {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: -o-flex;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.inline-block {
+	display: inline-block;
+}
+.red-border {
+	border: 2px solid red;
+}
+.container-body {
+	background-color: #006db0;
+
+}
+.container-form {
+	color: white;
+	padding: 30px 20px;
+}
+.container-form .headline {
+	margin-bottom: 40px;
+}
+.container-form .headline p {
+	margin-bottom: 10px;
+	line-height: 1.1;
+}
+.container-image {
+	background-image: url("https://s3.amazonaws.com/heroku-adfinitas-campaign/NPFS+-+Inscription/bg-header.jpg");
+}
+
+.form .input input {
+	border-radius: 10px;
+	margin: 15px 0;
+	max-height: 32px;
+	width: 100%;
+	color: #4f4e4e;
+}
+.intl-tel-input {
+	width: 100%;
+}
+
+.civilite-container {
+	text-align: left;
+	margin-bottom: 9px;
+}
+.civilite-container * {
+	display: inline-block;
+	color: white;
+	font-size: 16px;
+	line-height: 1.2;
+	font-family: Helvetica, Arial, Verdana, sans-serif;
+}
+.accept {
+	margin-top: 20px;
+	margin-bottom: 40px;
+}
+.accept p {
+	font-size: 11px;
+	font-style: italic;
+	font-weight: bold;
+}
+.round {
+	position: relative;
+	width: 100px;
+	padding-left: 22px;
+}
+.round .box {
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 50%;
+	cursor: pointer;
+	height: 14px;
+	left: 0;
+	position: absolute;
+	top: 30px;
+	width: 14px;
+	margin-left: 0;
+	margin-right: 0;
+}
+.round input[type="checkbox"] {
+	visibility: hidden;
+	margin-bottom: 13px;
+}
+
+.round input[type="checkbox"]:checked + .box {
+	background-color: #4f4e4e;
+	border-color: #4f4e4e;
+}
+.round label:hover {
+	cursor: pointer;
+}
+.round input[type="checkbox"]:checked + .box:after {
+	opacity: 1;
+}
+
+
+button.custom {
+	color: #005796 !important;
+	background-color: white !important;
+	text-transform: uppercase;
+	padding: 15px 45px;
+	border-radius: 5px;
+	font-size: 22px;
+}
+
+
+header {
+	padding: 30px 10px;
+}
+header .headline {
+	padding-left: 106px;
+}
+header .headline p {
+	color: #4f4e4e;
+	font-weight: bold;
+}
+
+
+.error-container .error {
+	color: red;
+	font-size: 14px;
+	margin-bottom: 1px;
+	font-weight: bold;
+	display: none;
+}
+
+@media screen and (max-width: 640px) {
+
+}

@@ -160,6 +160,23 @@ p, a, h1, h2, h3, h4, h5, h6, li, button, input {
 	opacity: 1;
 }
 
+.notif-container {
+	border-top: 1px solid black;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 60px;
+	background-color: white;
+	text-align: center;
+	display: none;
+}
+.notif-container p {
+	color: #005796 !important;
+	font-weight: bold;
+	margin: 10px;
+	font-size: 18px;
+}
 
 button.custom {
 	color: #005796 !important;

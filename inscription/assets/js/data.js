@@ -57,7 +57,9 @@ function sendData() {
     };
 
     //console.log(data);
-    makeCorsRequest(data);
+    if (makeCorsRequest(data)) {
+        displayNotif("Merci pour votre insciption !");
+    }
 }
 
 
@@ -98,10 +100,11 @@ function makeCorsRequest(data) {
     var xhr = createCORSRequest('POST', url);
     if (!xhr) {
         alert('CORS not supported');
-        return;
+        return false;
     }
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.send(body);
+    return true;
 }
 
 /*

@@ -100,3 +100,11 @@ function validateEmail(email) {
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
 }
+
+function displayNotif(text) {
+    $('.notif-container p').text(text);
+    $('.notif-container').slideDown();
+    setTimeout(function(){
+        $('.notif-container').slideUp();
+    },4000);
+}

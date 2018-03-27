@@ -56,8 +56,8 @@ function sendData() {
         }
     };
 
-    console.log(data);
-    //makeCorsRequest(data);
+    //console.log(data);
+    makeCorsRequest(data);
 }
 
 

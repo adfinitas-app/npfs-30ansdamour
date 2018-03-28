@@ -93,6 +93,14 @@ function validateForm() {
         check = false;
     }
 
+    /* CHECK CIVILITY */
+
+        if (!($('#f_male').is(":checked")) && !($('#f_female').is(":checked")) ) {
+            $(".civilite-container *").css('color','red');
+            $('.error-required').show();
+            check = false;
+        }
+
     return check;
 }
 

@@ -5,7 +5,7 @@
 function sendData() {
     var data = {
         "db": {
-            "schema": "npfs_newsletter_site\n",
+            "schema": "npfs_newsletter_site",
             "db": {
                 "civility": getCivility(),
                 "firstname": pureField($('#f_firstname').val().toUpperCase()),
@@ -19,7 +19,7 @@ function sendData() {
             }
         },
         "woopra": {
-            "host": "spa.asso.fr",			// Nom du projet dans Woopra.
+            "host": "nospetitsfreresetsoeurs.org",			// Nom du projet dans Woopra.
 
             /* Variables de configuration de la fiche utilisateur, préfixe : "cv_" */
 
@@ -27,7 +27,6 @@ function sendData() {
             "cv_firstname": pureField($('#f_firstname').val().toUpperCase()),
             "cv_lastname": pureField($('#f_lastname').val().toUpperCase()),
             "cv_email": pureField($('#f_mail').val()),
-            "cv_phone": pureField(getPhone()),
             "cv_address1": pureField($('#f_addr_1').val()),
             "cv_address2": pureField($('#f_addr_2').val()),
             "cv_postcode": pureField($('#f_zipcode').val()),
@@ -44,7 +43,6 @@ function sendData() {
                 "civility": getCivility(),
                 "firstname": pureField($('#f_firstname').val().toUpperCase()),
                 "lastname": pureField($('#f_lastname').val().toUpperCase()),
-                "email": pureField($('#f_mail').val()),
                 "phone": pureField(getPhone()),
                 "address1": pureField($('#f_addr_1').val()),
                 "address2": pureField($('#f_addr_2').val()),
@@ -55,7 +53,9 @@ function sendData() {
             "delLists": []  // Noms de transmission des listes dans lesquelles supprimer le contact.
         }
     };
-
+    if (pureField(getPhone()) != ""){
+        data.woopra["cv_phone"] = pureField(getPhone());
+    }
     //console.log(data);
     if (makeCorsRequest(data)) {
         displayNotif("Merci pour votre inscription !");

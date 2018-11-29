@@ -469,7 +469,7 @@ footer .display-table-cell + .display-table-cell {
     position: absolute;
     top: 0;
     right: 0;
-    left: unset;
+    left: auto;
     z-index: 2;
 
     display: block;
@@ -484,7 +484,7 @@ footer .display-table-cell + .display-table-cell {
     position: absolute;
     top: 0;
     right: 0;
-    left: unset;
+    left: auto;
     z-index: 2;
 
     display: block;
@@ -527,16 +527,16 @@ footer .display-table-cell + .display-table-cell {
     .remodal-close {
         color: grey;
         left: 0;
-        right: unset;
+        right: auto;
     }
     .remodal-close:before {
         left: 0;
-        right: unset;
+        right: auto;
     }
     .remodal .fleche {
         position: relative;
         top: -3px;
-        left: unset;
+        left: auto;
     }
     .remodal .column-red h2, .remodal .column-green h2 {
         font-size: 2.0rem;

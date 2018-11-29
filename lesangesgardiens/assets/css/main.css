@@ -48,8 +48,8 @@ header .btn-don.red {
 }
 
 header {
-    background: url('https://s3.eu-west-3.amazonaws.com/adfinitas-statics-cdn/npfs/LP_NOEL_2018/header-bg.jpg') no-repeat black;
-    background-size: cover;
+    /*background: url('https://s3.eu-west-3.amazonaws.com/adfinitas-statics-cdn/npfs/LP_NOEL_2018/header-bg.jpg') no-repeat black;
+    background-size: cover;*/
     min-height: 100vh;
     padding: 40px 0;
 }

@@ -1,0 +1,548 @@
+/*
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Satisfy', cursive;
+    font-family: 'Source Sans Pro', sans-serif;
+*/
+
+body {
+    background-color: white;
+    min-width: 280px;
+    overflow: scroll;
+}
+
+nav#top-bar {
+    background-color: white;
+}
+
+.btn-don {
+    border-radius: 25px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: white;
+    padding: 12px 30px;
+    cursor: pointer;
+    min-width: 220px;
+    min-height: 45px;
+    -webkit-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75);
+}
+
+.btn-don.red {
+    background-color: #f95656;
+}
+
+.btn-don.green {
+    background-color: #2b9c7b;
+}
+
+header .btn-don.green {
+    background-color: white;
+    color: #2b9c7b;
+}
+
+header .btn-don.red {
+    background-color: white;
+    color: #f95656;
+}
+
+header {
+    background: url('https://s3.eu-west-3.amazonaws.com/adfinitas-statics-cdn/npfs/LP_NOEL_2018/header-bg.jpg') no-repeat black;
+    background-size: cover;
+    min-height: 100vh;
+    padding: 40px 0;
+}
+
+header #bgvideo {
+    position: fixed;
+    top: 0;
+    left: 10%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-10%) translateY(0);
+    background-size: cover;
+    transition: 1s opacity;
+    background-image: url('https://s3.eu-west-3.amazonaws.com/adfinitas-statics-cdn/npfs/LP_NOEL_2018/header-bg.jpg');
+}
+
+header > div {
+    /*min-height: 500px;*/
+}
+
+header h1 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: normal;
+    color: white;
+    font-size: 3.3rem;
+    line-height: 1.1;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+header #ange-container {
+    padding: 0 10px 20px 10px;
+}
+
+section#accroche {
+    position: relative;
+    z-index: 2;
+    background-color: #f95656;
+}
+
+section#accroche h2 {
+    font-size: 2.3rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 10px;
+    display: inline-block;
+    line-height: 1.1;
+}
+
+section#accroche h3 {
+    font-size: 2.3rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: normal;
+    color: white;
+    margin-bottom: 20px;
+    display: inline-block;
+    line-height: 1.1;
+}
+
+section#accroche #etoile-gauche {
+    position: absolute;
+    left: -220px;
+}
+
+section#accroche #etoile-droite {
+    position: absolute;
+    right: -200px;
+}
+
+section#histoire {
+    background-color: white;
+}
+
+section#histoire .mycard {
+    text-align: center;
+}
+
+section#histoire .mycard.impair {
+    background: #f5f5f5;
+}
+
+section#histoire .mycard .card-title {
+    font-family: 'Satisfy', cursive;
+    font-size: 2.1rem;
+    text-align: center;
+    padding-top: 40px;
+    line-height: 1.1;
+}
+
+section#histoire .mycard.pair .card-title {
+    color: #f95656;
+}
+
+section#histoire .mycard.impair .card-title {
+    color: #2b9c7b;
+}
+
+section#histoire .mycard .card-name {
+    color: #6d6e71;
+    font-size: 1.8rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+section#histoire .mycard .card-desc {
+    color: #6d6e71;
+    font-size: 1.2rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+section#histoire .mycard .card-arrow {
+    display: inline-block;
+}
+
+section#devenez {
+    position: relative;
+    top: -27px;
+    background-color: #2b9c7b;
+    overflow: hidden;
+}
+
+section#devenez #petit-ange {
+    font-family: sans-serif;
+    color: black;
+    font-weight: normal;
+    font-size: 1.0rem;
+    position: absolute;
+    left: -200px;
+    top: -52px;
+}
+
+section#devenez p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.7rem;
+    font-weight: bold;
+    margin: 60px 10px 87px 10px;
+    color: white;
+}
+
+section#don
+{
+    background-color: white;
+    position: relative;
+    top: -27px;
+}
+
+.zoom-1 {
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+.zoom-1:hover {
+    transform: scale(1.05);
+}
+
+.zoom-2 {
+    transition: transform 0.5s;
+}
+
+.zoom-2:hover {
+    transform: scale(1.1);
+}
+
+.zoom-3 {
+    transition: transform 0.5s;
+}
+
+.zoom-3:hover {
+    transform: scale(1.2);
+}
+
+section#don .don-amount {
+    font-family: 'Raleway', sans-serif;
+    font-weight: normal;
+    color: #2b9c7b;
+    font-size: 4.0rem;
+    text-align: center;
+    margin-bottom: 0;
+    line-height: 1.1;
+}
+
+section#don .don-amount span {
+    font-weight: bold;
+}
+
+section#don .don-deduc {
+    text-align: center;
+    color: #6d6e71;
+    font-family: 'Raleway', sans-serif;
+    font-weight: normal;
+    font-size: 1.1rem;
+    line-height: 1.1;
+}
+
+section#don .don-deduc span {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+section#don .don-pour {
+    text-align: center;
+    color: #6d6e71;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    font-size: 1.1rem;
+    line-height: 1.1;
+    padding: 0 20px;
+    margin-bottom: 60px;
+    min-height: 90px;
+}
+
+footer {
+    background-color: #737373;
+}
+
+footer .f-date {
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+footer .f-desc {
+    line-height: 1.1;
+    font-size: 0.9rem;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-weight: normal;
+    padding: 0 10px;
+}
+
+footer .column {
+    position: relative;
+}
+
+footer .sep-v {
+    position: absolute;
+    right: -4px;
+    top: 25px;
+}
+
+footer .f-npfs-desc {
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    line-height: 1.1;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+footer .f-npfs-desc i {
+    font-weight: 700;
+}
+
+footer #f-addr {
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    line-height: 1.1;
+    font-size: 1.0rem;
+    text-align: center;
+    margin-top: 7px;
+    margin-bottom: 5px;
+}
+
+footer #f-email {
+    font-family: 'Source Sans Pro', sans-serif;
+    line-height: 1.1;
+    font-size: 1.0rem;
+    margin-bottom: 20px;
+    font-weight: normal;
+    color: white;
+}
+
+footer #f-retrouvez {
+    font-family: 'Source Sans Pro', sans-serif;
+    line-height: 1.1;
+    font-size: 1.0rem;
+    font-weight: normal;
+    color: white;
+    margin-bottom: 10px;
+}
+
+footer .display-table-cell + .display-table-cell {
+    padding-left: 8px;
+}
+
+@media screen and (max-width: 39.9375em) {
+    header {
+        background: url('https://s3.eu-west-3.amazonaws.com/adfinitas-statics-cdn/npfs/LP_NOEL_2018/header-bg.jpg') no-repeat black;
+        background-size: cover;
+    }
+    header h1 {
+        font-size: 2.2rem;
+    }
+}
+
+@media screen and (max-width: 380px) /* IPHONE 5 FIX */
+{
+    header h1 {
+        /*padding-top: 20px;*/
+    }
+    section#histoire .mycard .card-desc {
+        font-size: 1.15rem;
+    }
+}
+
+@media screen and (min-width: 64em) {
+    header > div {
+        /*min-height: 860px;*/
+    }
+}
+
+.remodal {
+    max-width: 1115px;
+    border-radius: 10px;
+    padding: 0;
+    overflow: hidden;
+}
+
+.remodal h1 {
+    color: #2b9c7b;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+.remodal .text-remodal-container {
+    padding: 0 3rem 20px 3rem;
+}
+
+.remodal .text-remodal-container p {
+    font-size: 1.05rem;
+    font-weight: normal;
+    font-family: 'Raleway', sans-serif;
+    text-align: left;
+    line-height: 1.5;
+    padding: 0 30px 20px 30px;
+}
+
+.remodal .column-red {
+    background-color: #f95656;
+}
+
+.remodal .column-green {
+    background-color: #2b9c7b;
+}
+
+.remodal .text-red {
+    color: #f95656;
+}
+
+.remodal .text-green {
+    color: #2b9c7b;
+}
+
+.remodal .column-green h2, .remodal .column-red h2 {
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    font-size: 2.4rem;
+    line-height: 1.1;
+    text-align: left;
+    margin: 60px 30px 80px 40px;
+}
+
+.remodal .column-green p, .remodal .column-red p {
+    font-size: 1.05rem;
+    font-weight: 500;
+    font-family: 'Raleway', sans-serif;
+    text-align: left;
+    line-height: 1.5;
+    color: white;
+    padding: 0 3rem 20px 3rem;
+}
+
+.remodal .column-red .avec, .remodal .column-green .avec {
+    font-size: 2.5rem;
+    font-weight: normal;
+    padding-bottom: 15px;
+    margin-top: 10px;
+    padding-right: 0;
+}
+
+.remodal .column-red .deduc, .remodal .column-green .deduc {
+    line-height: 1.2;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.remodal .btn-don.green {
+    background-color: white;
+    color: #2b9c7b;
+}
+
+.remodal .btn-don.red {
+    background-color: white;
+    color: #f95656;
+}
+
+.remodal-close:before {
+    font-family: Arial, "Helvetica CY", "Nimbus Sans L", sans-serif !important;
+    font-size: 60px;
+    line-height: 70px;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: unset;
+    z-index: 2;
+
+    display: block;
+
+    width: 60px;
+
+    content: "\00d7";
+    text-align: center;
+}
+
+.remodal-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: unset;
+    z-index: 2;
+
+    display: block;
+    overflow: visible;
+
+    width: 60px;
+    height: 60px;
+    margin: 0;
+    padding: 0;
+
+    cursor: pointer;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+    text-decoration: none;
+
+    color: white;
+    border: 0;
+    outline: 0;
+    background: transparent;
+}
+
+.remodal-close:hover,
+.remodal-close:focus {
+    color: black;
+}
+
+.remodal .fleche {
+    position: relative;
+    top: 50%;
+    left: -17px;
+}
+
+@media screen and (max-width: 39.9375em) {
+    .remodal .text-remodal-container {
+        padding: 0 1rem 20px 1rem;
+    }
+    .remodal .text-remodal-container p {
+        padding: 0 0 20px 0;
+    }
+    .remodal-close {
+        color: grey;
+        left: 0;
+        right: unset;
+    }
+    .remodal-close:before {
+        left: 0;
+        right: unset;
+    }
+    .remodal .fleche {
+        position: relative;
+        top: -3px;
+        left: unset;
+    }
+    .remodal .column-red h2, .remodal .column-green h2 {
+        font-size: 2.0rem;
+        text-align: center;
+        margin: 60px 0 50px 0;
+    }
+    .remodal .column-red p, .remodal .column-green p {
+        padding: 0 1rem 20px 1rem;
+    }
+}

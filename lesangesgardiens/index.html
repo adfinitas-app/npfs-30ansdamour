@@ -27,7 +27,7 @@
     </div>
 </nav>
 <header>
-    <video class="hide-for-small-only" autoplay="autoplay" controls="true" playsinline="" muted="" loop="loop" id="bgvideo">
+    <video class="hide-for-small-only" autoplay="autoplay" controls="false" playsinline="" muted="" loop="loop" id="bgvideo">
         <source src="https://s3.eu-west-3.amazonaws.com/adfinitas-statics-cdn/npfs/LP_NOEL_2018/video_npfs.mp4" type="video/mp4">
     </video>
     <div class="row align-middle" style="min-height: 100vh; width: 100%;max-height: 1080px">
@@ -38,7 +38,7 @@
             </div>
             <div class="row">
                 <div class="column small-12 medium-6 text-center medium-text-center margin-bottom-1">
-                    <button type="button" class="btn-don green zoom-3" id="btn-header-video">Voir la vidéo</button>
+                    <button type="button" class="btn-don green zoom-3" data-remodal-target="video">Voir la vidéo</button>
                 </div>
                 <div class="column small-12 medium-6 text-center medium-text-center margin-bottom-1">
                     <a target="_blank" href="http://www.nospetitsfreresetsoeurs.org/faire-un-don/?utm_source=LPANGES&utm content=CTADONH&utm_campaign=FA2018">
@@ -51,7 +51,7 @@
 </header>
 <section id="accroche">
     <div class="text-center">
-        <img alt="Fleche vers le bas" style="position: relative;top:-3px;" src="https://s3.eu-west-3.amazonaws.com/adfinitas-statics-cdn/npfs/LP_NOEL_2018/fleche-blanche-down.png" align="top">
+        <img alt="Fleche vers le bas" style="position: relative;top:-1px;" src="https://s3.eu-west-3.amazonaws.com/adfinitas-statics-cdn/npfs/LP_NOEL_2018/fleche-blanche-down.png" align="top">
     </div>
     <div class="text-center padding-vertical-3">
         <div class="display-inline-block position-relative overflow-hidden">
@@ -269,9 +269,15 @@
     </div>
 </footer>
 
+<!-- Video remodal -->
+<div class="remodal" data-remodal-id="video">
+    <button data-remodal-action="close" class="remodal-close" style="color: grey"></button>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/HWU_NlTe5p4?ecver=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 <!-- REMODALS HISTORY POPUP -->
 <!--Souvenson remodal-->
-<div class="remodal" data-remodal-id="souvenson">
+<div class="remodal history" data-remodal-id="souvenson">
     <button data-remodal-action="close" class="remodal-close"></button>
     <div class="row expanded">
         <div class="column small-12 medium-6 padding-bottom-2 position-relative">
@@ -334,7 +340,7 @@
 </div>
 
 <!--Elvita remodal-->
-<div class="remodal" data-remodal-id="elvita">
+<div class="remodal history" data-remodal-id="elvita">
     <button data-remodal-action="close" class="remodal-close"></button>
     <div class="row expanded">
         <div class="column small-12 medium-6 padding-bottom-2 position-relative">
@@ -384,7 +390,7 @@
 </div>
 
 <!--Irmonde remodal-->
-<div class="remodal" data-remodal-id="irmonde">
+<div class="remodal history" data-remodal-id="irmonde">
     <button data-remodal-action="close" class="remodal-close"></button>
     <div class="row expanded">
         <div class="column small-12 medium-6 padding-bottom-2 position-relative">
@@ -451,7 +457,7 @@
 </div>
 
 <!--Sabine remodal-->
-<div class="remodal" data-remodal-id="sabine">
+<div class="remodal history" data-remodal-id="sabine">
     <button data-remodal-action="close" class="remodal-close"></button>
     <div class="row expanded">
         <div class="column small-12 medium-6 padding-bottom-2 position-relative">

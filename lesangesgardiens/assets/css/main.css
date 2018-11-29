@@ -374,25 +374,25 @@ footer .display-table-cell + .display-table-cell {
     }
 }
 
-.remodal {
+.remodal.history {
     max-width: 1115px;
     border-radius: 10px;
     padding: 0;
     overflow: hidden;
 }
 
-.remodal h1 {
+.remodal.history h1 {
     color: #2b9c7b;
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
     font-size: 2.5rem;
 }
 
-.remodal .text-remodal-container {
+.remodal.history .text-remodal-container {
     padding: 0 3rem 20px 3rem;
 }
 
-.remodal .text-remodal-container p {
+.remodal.history .text-remodal-container p {
     font-size: 1.05rem;
     font-weight: normal;
     font-family: 'Raleway', sans-serif;
@@ -401,23 +401,23 @@ footer .display-table-cell + .display-table-cell {
     padding: 0 30px 20px 30px;
 }
 
-.remodal .column-red {
+.remodal.history .column-red {
     background-color: #f95656;
 }
 
-.remodal .column-green {
+.remodal.history .column-green {
     background-color: #2b9c7b;
 }
 
-.remodal .text-red {
+.remodal.history .text-red {
     color: #f95656;
 }
 
-.remodal .text-green {
+.remodal.history .text-green {
     color: #2b9c7b;
 }
 
-.remodal .column-green h2, .remodal .column-red h2 {
+.remodal.history .column-green h2, .remodal.history .column-red h2 {
     color: white;
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
@@ -427,7 +427,7 @@ footer .display-table-cell + .display-table-cell {
     margin: 120px 30px 80px 40px;
 }
 
-.remodal .column-green p, .remodal .column-red p {
+.remodal.history .column-green p, .remodal.history .column-red p {
     font-size: 1.05rem;
     font-weight: 500;
     font-family: 'Raleway', sans-serif;
@@ -437,7 +437,7 @@ footer .display-table-cell + .display-table-cell {
     padding: 0 3rem 20px 3rem;
 }
 
-.remodal .column-red .avec, .remodal .column-green .avec {
+.remodal.history .column-red .avec, .remodal.history .column-green .avec {
     font-size: 2.5rem;
     font-weight: normal;
     padding-bottom: 15px;
@@ -445,18 +445,18 @@ footer .display-table-cell + .display-table-cell {
     padding-right: 0;
 }
 
-.remodal .column-red .deduc, .remodal .column-green .deduc {
+.remodal.history .column-red .deduc, .remodal.history .column-green .deduc {
     line-height: 1.2;
     font-weight: 400;
     margin-bottom: 30px;
 }
 
-.remodal .btn-don.green {
+.remodal.history .btn-don.green {
     background-color: white;
     color: #2b9c7b;
 }
 
-.remodal .btn-don.red {
+.remodal.history .btn-don.red {
     background-color: white;
     color: #f95656;
 }
@@ -518,10 +518,10 @@ footer .display-table-cell + .display-table-cell {
 }
 
 @media screen and (max-width: 39.9375em) {
-    .remodal .text-remodal-container {
+    .remodal.history .text-remodal-container {
         padding: 0 1rem 20px 1rem;
     }
-    .remodal .text-remodal-container p {
+    .remodal.history .text-remodal-container p {
         padding: 0 0 20px 0;
     }
     .remodal-close {
@@ -533,17 +533,17 @@ footer .display-table-cell + .display-table-cell {
         left: 0;
         right: auto;
     }
-    .remodal .fleche {
+    .remodal.history .fleche {
         position: relative;
         top: -3px;
         left: auto;
     }
-    .remodal .column-red h2, .remodal .column-green h2 {
+    .remodal.history .column-red h2, .remodal.history .column-green h2 {
         font-size: 2.0rem;
         text-align: center;
         margin: 90px 0 50px 0;
     }
-    .remodal .column-red p, .remodal .column-green p {
+    .remodal.history .column-red p, .remodal.history .column-green p {
         padding: 0 1rem 20px 1rem;
     }
 }

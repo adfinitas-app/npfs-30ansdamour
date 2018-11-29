@@ -53,6 +53,7 @@ header {
     min-height: 100vh;
     max-height: 1080px;
     padding: 40px 0;
+    background-color: rgba(43, 156, 123, 0.6);
 }
 
 header #bgvideo {
@@ -352,6 +353,7 @@ footer .display-table-cell + .display-table-cell {
     header {
         background: url('https://s3.eu-west-3.amazonaws.com/adfinitas-statics-cdn/npfs/LP_NOEL_2018/header-bg.jpg') no-repeat black;
         background-size: cover;
+        background-color: transparent;
     }
     header h1 {
         font-size: 2.2rem;
